@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="dkz12345 是一个由凯中持续构建的个人云端工作台，连接文件传输、AI 对话、学习系统与实验性前端项目。">
+    <meta name="theme-color" content="#071011">
+    <title>dkz12345 · Personal Cloud Workspace</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="preload" href="assets/system-map.png" as="image">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#services">跳到服务</a>
+
+    <header class="site-header" data-nav>
+      <a class="brand" href="#overview" aria-label="dkz12345 首页">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>dkz12345</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 7h14M5 12h14M5 17h14"></path>
+        </svg>
+        <span class="sr-only">打开导航</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="主导航">
+        <a href="#overview">概览</a>
+        <a href="#services">服务</a>
+        <a href="#story">故事</a>
+        <a href="#roadmap">未来</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-dark" id="overview">
+        <div class="hero-copy reveal">
+          <h1>dkz12345</h1>
+          <p class="hero-lede">一个由凯中持续构建的个人云端工作台。</p>
+          <p class="hero-text">
+            从想法、实验、脚本与工具开始，逐步整理成可访问、可维护、可继续扩展的云端系统入口。
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#services">
+              <span>查看服务</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h13m-5-5 5 5-5 5"></path>
+              </svg>
+            </a>
+            <a class="button ghost" href="#story">
+              <span>了解故事</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h13m-5-5 5 5-5 5"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual reveal delay-1" aria-label="dkz12345 云端系统视觉图">
+          <img src="assets/system-map.png" alt="dkz12345 云端系统连接图，展示项目入口、文件服务、AI 对话与实验服务的连接关系">
+        </div>
+        <div class="hero-strip" aria-hidden="true">
+          <span>Personal Cloud Lab</span>
+          <span>Project Gateway</span>
+          <span>Built for iteration</span>
+        </div>
+      </section>
+
+      <section class="positioning">
+        <div class="section-inner positioning-grid">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Cloud Workspace</p>
+            <h2>从实验、工具、服务到一个持续演进的云端工作台。</h2>
+          </div>
+          <div class="positioning-copy reveal delay-1">
+            <p>
+              dkz12345 将分散的项目收束到一个稳定入口：文件传输、AI 对话、学习系统与前端实验都可以在这里被发现、进入和继续生长。
+            </p>
+            <p>
+              它不是一次性页面，而是一个逐步成型的系统门面，用来承载凯中长期维护的个人云端基础设施。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="services section-light" id="services">
+        <div class="section-inner">
+          <div class="section-heading split reveal">
+            <div>
+              <p class="section-kicker">Current Services</p>
+              <h2>正在运行的服务</h2>
+            </div>
+            <a class="section-link" href="#roadmap">
+              <span>查看未来计划</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h13m-5-5 5 5-5 5"></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card reveal">
+              <div class="service-icon icon-claw" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M12 4 4.8 18.5h14.4L12 4Z"></path>
+                  <path d="M12 9.4v5.2M9.7 13.1 12 15l2.3-1.9"></path>
+                </svg>
+              </div>
+              <div class="service-meta">
+                <h3>ClawDrop</h3>
+                <span class="status online">Online</span>
+              </div>
+              <p>轻量文件投递与云端传输服务。用于在设备、脚本与服务器之间稳定传递文件。</p>
+              <div class="service-foot">
+                <span>clawdrop.dkz12345.com</span>
+                <a href="https://clawdrop.dkz12345.com" target="_blank" rel="noopener noreferrer" aria-label="进入 ClawDrop">
+                  <span>进入 ClawDrop</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 17 17 7M9 7h8v8"></path>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="service-card reveal delay-1">
+              <div class="service-icon icon-ai" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M7 8.5h10a4 4 0 0 1 4 4v1a4 4 0 0 1-4 4H10l-4 3v-3A4 4 0 0 1 2 13.5v-1a4 4 0 0 1 4-4h1Z"></path>
+                  <path d="M8 12.8h.01M12 12.8h.01M16 12.8h.01"></path>
+                </svg>
+              </div>
+              <div class="service-meta">
+                <h3>AI Chat</h3>
+                <span class="status online">Online</span>
+              </div>
+              <p>面向云端部署的 AI 对话入口，专注于稳定、轻量和可持续扩展的模型接入体验。</p>
+              <div class="service-foot">
+                <span>aichat.dkz12345.com</span>
+                <a href="https://aichat.dkz12345.com" target="_blank" rel="noopener noreferrer" aria-label="进入 AI Chat">
+                  <span>进入 AI Chat</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 17 17 7M9 7h8v8"></path>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="service-card reveal delay-2">
+              <div class="service-icon icon-type" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 5h14M12 5v14M8 19h8"></path>
+                </svg>
+              </div>
+              <div class="service-meta">
+                <h3>StillType</h3>
+                <span class="status online">Online</span>
+              </div>
+              <p>围绕文字、创作与输入体验展开的项目，让练习、表达与节奏管理保持在同一个云端入口。</p>
+              <div class="service-foot">
+                <span>stilltype.dkz12345.com</span>
+                <a href="https://stilltype.dkz12345.com" target="_blank" rel="noopener noreferrer" aria-label="进入 StillType">
+                  <span>进入 StillType</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 17 17 7M9 7h8v8"></path>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="service-card reveal">
+              <div class="service-icon icon-study" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 5.5h8a3 3 0 0 1 3 3v10a3 3 0 0 0-3-3H5V5.5Z"></path>
+                  <path d="M16 8.5a3 3 0 0 1 3-3h0v10h-3"></path>
+                </svg>
+              </div>
+              <div class="service-meta">
+                <h3>Study Companion</h3>
+                <span class="status online">Online</span>
+              </div>
+              <p>学习计划与陪伴系统，用更清晰的节奏组织目标、周期和日常推进。</p>
+              <div class="service-foot">
+                <span>studycompanion.dkz12345.com</span>
+                <a href="https://studycompanion.dkz12345.com" target="_blank" rel="noopener noreferrer" aria-label="进入 Study Companion">
+                  <span>进入 Study Companion</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 17 17 7M9 7h8v8"></path>
+                  </svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="service-card reveal delay-1">
+              <div class="service-icon icon-game" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 5h5v5H5V5Zm9 0h5v5h-5V5ZM5 14h5v5H5v-5Zm9 0h5v5h-5v-5Z"></path>
+                </svg>
+              </div>
+              <div class="service-meta">
+                <h3>Tetris</h3>
+                <span class="status online">Online</span>
+              </div>
+              <p>小游戏与实验性前端项目，用轻量互动保留创意验证和界面练习的空间。</p>
+              <div class="service-foot">
+                <span>tetris.dkz12345.com</span>
+                <a href="https://tetris.dkz12345.com" target="_blank" rel="noopener noreferrer" aria-label="进入 Tetris">
+                  <span>进入 Tetris</span>
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7 17 17 7M9 7h8v8"></path>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="story" id="story">
+        <div class="section-inner story-panel reveal">
+          <div>
+            <p class="section-kicker">Built from experiments</p>
+            <h2>逐步连接起来的云端系统。</h2>
+          </div>
+          <div class="story-copy">
+            <p>
+              最初，它只是几个运行在本地的实验项目。随着服务器、域名和部署链路逐步打通，这些分散的工具开始被整理成一个可以长期运行的云端工作台。
+            </p>
+            <p>
+              dkz12345 是这个过程的入口：它记录工具如何从想法变成服务，也承载后续更多系统的接入。每个服务都不是孤立的 demo，而是凯中长期工具链的一部分。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="capabilities section-light">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="section-kicker">System Capabilities</p>
+            <h2>当前承载的能力</h2>
+          </div>
+          <div class="capability-grid">
+            <div class="capability-card reveal">
+              <span class="capability-symbol cloud" aria-hidden="true"></span>
+              <h3>Cloud Deployment</h3>
+              <p>面向静态站点与轻量服务的云端发布链路。</p>
+            </div>
+            <div class="capability-card reveal delay-1">
+              <span class="capability-symbol ai" aria-hidden="true"></span>
+              <h3>AI Interface</h3>
+              <p>为云端 AI 对话入口保留清晰、可持续扩展的接入层。</p>
+            </div>
+            <div class="capability-card reveal delay-2">
+              <span class="capability-symbol file" aria-hidden="true"></span>
+              <h3>File Transfer</h3>
+              <p>在设备、脚本和服务器之间完成轻量文件传递。</p>
+            </div>
+            <div class="capability-card reveal">
+              <span class="capability-symbol route" aria-hidden="true"></span>
+              <h3>Project Gateway</h3>
+              <p>把不同子域名和服务收束成可发现的入口体系。</p>
+            </div>
+            <div class="capability-card reveal delay-1">
+              <span class="capability-symbol infra" aria-hidden="true"></span>
+              <h3>Personal Infrastructure</h3>
+              <p>围绕个人工具、学习和自动化场景持续沉淀基础设施。</p>
+            </div>
+            <div class="capability-card reveal delay-2">
+              <span class="capability-symbol iterate" aria-hidden="true"></span>
+              <h3>Continuous Iteration</h3>
+              <p>当前版本先可用，后续以更稳定的方式继续演进。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="roadmap" id="roadmap">
+        <div class="section-inner">
+          <div class="section-heading split reveal">
+            <div>
+              <p class="section-kicker">Roadmap</p>
+              <h2>持续演进的方向</h2>
+            </div>
+            <p class="roadmap-note">Personal cloud workspace · 2026</p>
+          </div>
+          <div class="roadmap-line reveal">
+            <article>
+              <span>01</span>
+              <h3>更多 AI 工具</h3>
+              <p>把模型接入、对话入口和自动化能力整理成更稳定的工具层。</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>学习系统</h3>
+              <p>继续扩展计划、周期、反馈与复盘，形成更完整的学习工作流。</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>文件与数据中台</h3>
+              <p>让文件投递、数据保存和跨设备流转更像一个可依赖的基础组件。</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>Agent 控制台</h3>
+              <p>为自动化任务、远程控制和项目运维预留统一的管理入口。</p>
+            </article>
+            <article>
+              <span>05</span>
+              <h3>个人项目仪表盘</h3>
+              <p>逐步汇总项目状态、部署记录和服务健康，让入口页变成真正的系统门面。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>dkz12345</strong>
+        <span>由凯中持续构建</span>
+      </div>
+      <p>Built and maintained by Kaizhong. Personal cloud workspace · 2026</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
