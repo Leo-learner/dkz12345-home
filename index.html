@@ -21,7 +21,7 @@ a{color:inherit;text-decoration:none}
   --bg:#EEE9DF;--bg-2:#E7E1D5;--surface:#FBF9F4;--surface-2:#FFFFFF;
   --text:#191713;--text-dim:#6A655B;--text-faint:#A8A091;
   --border:rgba(25,23,19,.13);--border-strong:rgba(25,23,19,.26);
-  --accent:#C2683F;--accent-ink:#FFFFFF;--online:#3C9A6A;
+  --accent:#C2683F;--accent-ink:#FFFFFF;--online:#3C9A6A;--tag-ink:#8E4220;
   --nav-bg:rgba(238,233,223,.74);--grid-opacity:0;
   --card-shadow:0 1px 2px rgba(25,23,19,.05),0 20px 44px -26px rgba(25,23,19,.30);
   --radius:6px;
@@ -34,7 +34,7 @@ a{color:inherit;text-decoration:none}
   --bg:#07090C;--bg-2:#090C10;--surface:#0E1318;--surface-2:#121821;
   --text:#EDF0F2;--text-dim:#99A1AB;--text-faint:#586069;
   --border:rgba(255,255,255,.10);--border-strong:rgba(255,255,255,.18);
-  --accent:#3DE0A6;--accent-ink:#04130C;--online:#37D17F;
+  --accent:#3DE0A6;--accent-ink:#04130C;--online:#37D17F;--tag-ink:#3DE0A6;
   --nav-bg:rgba(7,9,12,.66);--grid-opacity:.55;--card-shadow:none;--radius:12px;
   --font-display:'Space Grotesk',sans-serif;--display-weight:700;--display-tracking:-0.02em;
   --wordmark-tracking:-0.045em;
@@ -128,7 +128,7 @@ a{color:inherit;text-decoration:none}
 .h2-lg{font-family:var(--font-display);font-weight:var(--display-weight);letter-spacing:var(--display-tracking);line-height:1.04;font-size:clamp(30px,4.4vw,58px);color:var(--text)}
 
 /* Service cards */
-.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:18px}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:18px}
 .svc-card{display:flex;flex-direction:column;height:100%;padding:26px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);box-shadow:var(--card-shadow);transition:transform .4s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease}
 .svc-card:hover{box-shadow:var(--card-shadow),0 24px 48px -20px rgba(0,0,0,.15)}
 .svc-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
@@ -136,6 +136,10 @@ a{color:inherit;text-decoration:none}
 .svc-status{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;color:var(--text-dim)}
 .svc-status-dot{width:6px;height:6px;border-radius:50%;background:var(--online);box-shadow:0 0 0 3px color-mix(in srgb,var(--online) 26%,transparent)}
 .svc-name{margin:0 0 10px;font-family:var(--font-display);font-weight:600;font-size:21px;letter-spacing:var(--display-tracking);color:inherit}
+.svc-name-row{display:flex;align-items:center;flex-wrap:wrap;gap:8px 10px;margin:0 0 10px}
+.svc-name-row .svc-name{margin:0}
+.svc-tag{display:inline-flex;align-items:center;gap:5px;height:20px;padding:0 7px;box-sizing:border-box;border-radius:4px;font-family:var(--font-mono);font-size:10.5px;letter-spacing:.04em;color:var(--text-dim);border:1px solid var(--border-strong)}
+.svc-tag-new{border:0;font-weight:500;letter-spacing:.12em;color:var(--tag-ink);background:color-mix(in srgb,var(--accent) 13%,transparent)}
 .svc-desc{margin:0 0 22px;font-size:14px;line-height:1.65;color:var(--text-dim);flex:1}
 .svc-domain{font-family:var(--font-mono);font-size:11.5px;color:var(--text-faint);margin-bottom:16px}
 .svc-enter{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:500;color:var(--text)}
@@ -424,8 +428,24 @@ a{color:inherit;text-decoration:none}
         </a>
       </div>
 
-      <!-- StillType -->
+      <!-- Game Hub -->
       <div data-reveal style="opacity:0;transition:opacity .7s ease .12s" data-svc-wrapper>
+        <a href="https://games.dkz12345.com" target="_blank" rel="noopener" class="svc-card" data-svc-card>
+          <div class="svc-card-top">
+            <span class="svc-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="11" rx="4"/><path d="M7.5 10.5v4"/><path d="M5.5 12.5h4"/><circle cx="15.5" cy="11.5" r="1" fill="currentColor" stroke="none"/><circle cx="17.8" cy="13.8" r="1" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <span class="svc-status"><span class="svc-status-dot"></span>Online</span>
+          </div>
+          <div class="svc-name-row"><h3 class="svc-name">Game Hub</h3><span class="svc-tag svc-tag-new">NEW</span></div>
+          <p class="svc-desc">原创文字游戏与小游戏的游玩入口。目前已上架《一千四百一十八天》和《生于一九五〇》，登录后存档跟随账号。</p>
+          <div class="svc-domain">games.dkz12345.com</div>
+          <div class="svc-enter">进入 Game Hub <span style="font-family:var(--font-mono);color:var(--accent)">↗</span></div>
+        </a>
+      </div>
+
+      <!-- StillType -->
+      <div data-reveal style="opacity:0;transition:opacity .7s ease .18s" data-svc-wrapper>
         <a href="https://stilltype.dkz12345.com" target="_blank" rel="noopener" class="svc-card" data-svc-card>
           <div class="svc-card-top">
             <span class="svc-icon">
@@ -441,7 +461,7 @@ a{color:inherit;text-decoration:none}
       </div>
 
       <!-- Study Companion -->
-      <div data-reveal style="opacity:0;transition:opacity .7s ease .18s" data-svc-wrapper>
+      <div data-reveal style="opacity:0;transition:opacity .7s ease .24s" data-svc-wrapper>
         <a href="https://studycompanion.dkz12345.com" target="_blank" rel="noopener" class="svc-card" data-svc-card>
           <div class="svc-card-top">
             <span class="svc-icon">
@@ -457,7 +477,7 @@ a{color:inherit;text-decoration:none}
       </div>
 
       <!-- Tetris -->
-      <div data-reveal style="opacity:0;transition:opacity .7s ease .24s" data-svc-wrapper>
+      <div data-reveal style="opacity:0;transition:opacity .7s ease .30s" data-svc-wrapper>
         <a href="https://tetris.dkz12345.com" target="_blank" rel="noopener" class="svc-card" data-svc-card>
           <div class="svc-card-top">
             <span class="svc-icon">
@@ -473,7 +493,7 @@ a{color:inherit;text-decoration:none}
       </div>
 
       <!-- unfortunately -->
-      <div data-reveal style="opacity:0;transition:opacity .7s ease .30s" data-svc-wrapper>
+      <div data-reveal style="opacity:0;transition:opacity .7s ease .36s" data-svc-wrapper>
         <a href="https://unfortunately.dkz12345.com" target="_blank" rel="noopener" class="svc-card" data-svc-card>
           <div class="svc-card-top">
             <span class="svc-icon">
@@ -485,6 +505,38 @@ a{color:inherit;text-decoration:none}
           <p class="svc-desc">记录求职投递、申请结果与每次尝试的收获。用统计、复盘和留言，把求职经历慢慢积累下来。</p>
           <div class="svc-domain">unfortunately.dkz12345.com</div>
           <div class="svc-enter">进入 unfortunately <span style="font-family:var(--font-mono);color:var(--accent)">↗</span></div>
+        </a>
+      </div>
+
+      <!-- NBD -->
+      <div data-reveal style="opacity:0;transition:opacity .7s ease .42s" data-svc-wrapper>
+        <a href="https://nbd.dkz12345.com" target="_blank" rel="noopener" class="svc-card" data-svc-card>
+          <div class="svc-card-top">
+            <span class="svc-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5.5"/><circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <span class="svc-status"><span class="svc-status-dot"></span>Online</span>
+          </div>
+          <div class="svc-name-row"><h3 class="svc-name">NBD 没什么大不了</h3><span class="svc-tag svc-tag-new">NEW</span><span class="svc-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>仅本人</span></div>
+          <p class="svc-desc">把当时觉得天塌了的事记下来，过一阵子再回看。在 Claude 或 ChatGPT 里随手记一笔，网页端用来回看和整理经验。</p>
+          <div class="svc-domain">nbd.dkz12345.com</div>
+          <div class="svc-enter">登录后进入 NBD <span style="font-family:var(--font-mono);color:var(--accent)">↗</span></div>
+        </a>
+      </div>
+
+      <!-- PLOS -->
+      <div data-reveal style="opacity:0;transition:opacity .7s ease .48s" data-svc-wrapper>
+        <a href="https://plos.dkz12345.com" target="_blank" rel="noopener" class="svc-card" data-svc-card>
+          <div class="svc-card-top">
+            <span class="svc-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M11.5 20.5C7 20.5 4.2 17.2 4.2 12.6C4.2 7.4 8.2 4 19.3 3.6C19.3 13.8 15.7 20.5 11.5 20.5Z"/><path d="M11.5 20.5C11.5 15 13.4 9.4 18 5.6"/></svg>
+            </span>
+            <span class="svc-status"><span class="svc-status-dot"></span>Online</span>
+          </div>
+          <div class="svc-name-row"><h3 class="svc-name">PLOS 学习系统</h3><span class="svc-tag svc-tag-new">NEW</span><span class="svc-tag"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>仅本人</span></div>
+          <p class="svc-desc">个人学习系统。按月目标、当天精力和休息策略，每天早上排好今天学什么，晚上汇报完成度。</p>
+          <div class="svc-domain">plos.dkz12345.com</div>
+          <div class="svc-enter">登录后进入 PLOS <span style="font-family:var(--font-mono);color:var(--accent)">↗</span></div>
         </a>
       </div>
     </div>
@@ -575,9 +627,13 @@ a{color:inherit;text-decoration:none}
         <div class="footer-links">
           <a href="https://clawdrop.dkz12345.com" target="_blank" rel="noopener">ClawDrop</a>
           <a href="https://aichat.dkz12345.com" target="_blank" rel="noopener">AI Chat</a>
+          <a href="https://games.dkz12345.com" target="_blank" rel="noopener">Game Hub</a>
           <a href="https://stilltype.dkz12345.com" target="_blank" rel="noopener">StillType</a>
           <a href="https://studycompanion.dkz12345.com" target="_blank" rel="noopener">Study Companion</a>
           <a href="https://tetris.dkz12345.com" target="_blank" rel="noopener">Tetris</a>
+          <a href="https://unfortunately.dkz12345.com" target="_blank" rel="noopener">unfortunately.</a>
+          <a href="https://nbd.dkz12345.com" target="_blank" rel="noopener">NBD <span style="font-family:var(--font-mono);font-size:11px;color:var(--text-dim)">· 仅本人</span></a>
+          <a href="https://plos.dkz12345.com" target="_blank" rel="noopener">PLOS <span style="font-family:var(--font-mono);font-size:11px;color:var(--text-dim)">· 仅本人</span></a>
         </div>
       </div>
       <div>
